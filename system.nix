@@ -16,15 +16,15 @@
     firefox
     git
     helix
-    localsend
     mesa
     # mpv
     oculante
     ouch
     ripgrep
+    sendme
     skim
     tree
-    wezterm
+    # wezterm
     wget
     zellij
     zstd
@@ -61,7 +61,7 @@
   services.desktopManager.plasma6.enable = true;
   environment.plasma6.excludePackages = with pkgs; [
     elisa
-    konsole
+    # konsole
     gwenview
     kate
     xterm

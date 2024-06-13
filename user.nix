@@ -6,6 +6,8 @@
     onlyoffice-bin
     qgis
     vlc
+    sonic-visualiser
+    saga
   ];
 
   users.users.camper = {
