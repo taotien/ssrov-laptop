@@ -10,7 +10,7 @@
 
   users.users.camper = {
     isNormalUser = true;
-    extraGroups = ["wheel"];
     shell = pkgs.nushell;
+    hashedPassword = "$y$j9T$RlqMWcgUKrHtDUODWYJlL/$UyRHUuS0xJUx/I3UuBID9uqC9aPMAnUI058ca0Z5Bk9";
   };
 }

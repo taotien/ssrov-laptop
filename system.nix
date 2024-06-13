@@ -52,8 +52,12 @@
   services.xserver.enable = true;
   services.xserver.xkb.layout = "us";
   systemd.services.display-manager.restartIfChanged = false;
-  services.displayManager.sddm.enable = true;
-  services.displayManager.sddm.wayland.enable = true;
+  services.displayManager = {
+    sddm.enable = true;
+    sddm.wayland.enable = true;
+    autoLogin.enable = true;
+    autoLogin.user = "camper";
+  };
   services.desktopManager.plasma6.enable = true;
   environment.plasma6.excludePackages = with pkgs; [
     elisa
@@ -98,6 +102,13 @@
     PAGER = "bat";
     SKIM_DEFAULT_COMMAND = "rg --files";
   };
+
+  users.users.root.openssh.authorizedKeys.keys = [
+    "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIJKLOGhoTauV+yBide0qYQzZ/0rRw7ImfrOTvuZxjIFl"
+  ];
+  users.users.root.hashedPassword = "$y$j9T$HtffbZMQD7RrZoCIS/gge1$bP5qxgomfi508emW85s.Cci9Xi9zoWfSQVEdRxdoJl0";
+
+  users.mutableUsers = false;
 
   time.timeZone = lib.mkDefault "US/Pacific";
   # services.automatic-timezoned.enable = lib.mkDefault true;
