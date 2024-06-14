@@ -2,12 +2,32 @@
   users.users.camper.packages = with pkgs; [
     arduino-ide
     bottles
-    jupyter
+    # jupyter
     onlyoffice-bin
     qgis
     vlc
     sonic-visualiser
     saga
+    (python311Full.withPackages (ps:
+      with ps; [
+        panel
+        ipywidgets
+        jupyter
+        pandas
+        numpy
+        plotly
+        pyserial
+        pyparsing
+        nbclient
+        ipywidgets
+        bokeh
+        hvplot
+        datashader
+        scipy
+        scikit-learn
+        streamz
+        tkinter
+      ]))
   ];
 
   users.users.camper = {

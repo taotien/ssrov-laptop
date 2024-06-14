@@ -105,6 +105,7 @@
 
   users.users.root.openssh.authorizedKeys.keys = [
     "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIJKLOGhoTauV+yBide0qYQzZ/0rRw7ImfrOTvuZxjIFl"
+    "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAINimJXI8WOYUMwfAcGyKB9EYtuaClNjeEH4ZTQl9tuUY"
   ];
   users.users.root.hashedPassword = "$y$j9T$HtffbZMQD7RrZoCIS/gge1$bP5qxgomfi508emW85s.Cci9Xi9zoWfSQVEdRxdoJl0";
 
