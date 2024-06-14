@@ -31,6 +31,12 @@
       ]))
   ];
 
+  virtualisation = {
+    libvirtd.enable = true;
+    spiceUSBRedirection.enable = true;
+  };
+  programs.virt-manager.enable = true;
+
   users.users.camper = {
     isNormalUser = true;
     shell = pkgs.nushell;
