@@ -6,6 +6,7 @@
     saga
     sonic-visualiser
     vlc
+    freerdp
     (python311Full.withPackages (ps:
       with ps; [
         jupyter
@@ -41,5 +42,6 @@
     isNormalUser = true;
     shell = pkgs.nushell;
     hashedPassword = "$y$j9T$RlqMWcgUKrHtDUODWYJlL/$UyRHUuS0xJUx/I3UuBID9uqC9aPMAnUI058ca0Z5Bk9";
+    extraGroups = ["dialout"];
   };
 }
